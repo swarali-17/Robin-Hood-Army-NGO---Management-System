@@ -1,0 +1,331 @@
+/* robin_Dashboard.css */
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: #f9f9f9;
+    color: #444;
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #5cb874;
+  }
+  
+  a:hover {
+    color: #80c792;
+    text-decoration: underline;
+  }
+  
+  header {
+    text-align: center;
+  }
+  
+  .tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #5cb874; /* Green color */
+    border-radius: 5px;
+    display: flex; /* Ensures tabs are in a single line */
+  }
+  
+  .tab button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: background-color 0.3s ease;
+    width: 25%;
+    color: white; /* Change font color to white */
+    font-size: 18px; /* Increase font size */
+  }
+  
+  .tab button:hover {
+    background-color: #80c792; /* Lighter shade of green on hover */
+  }
+  
+  .tabcontent {
+    display: none;
+    padding: 20px;
+    border-top: none;
+  }
+
+  /* Tab-specific styling for Account Settings */
+#AccountSettings.tabcontent {
+  margin-bottom: 120px;
+  background-color: #f0f0f0;
+}
+
+#AccountSettings.tabcontent h2 {
+  text-align: center;
+  color: #5cb874;
+  cursor: pointer;
+}
+
+#AccountSettings.tabcontent label {
+  display: block;
+  color: #000;
+}
+
+#AccountSettings.tabcontent input[type="text"],
+#AccountSettings.tabcontent input[type="password"] {
+  width: 95%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+  margin-bottom: 15px;
+}
+
+#AccountSettings.tabcontent input[type="text"]:focus,
+#AccountSettings.tabcontent input[type="password"]:focus {
+  outline: none;
+  border-color: #c9e6d1;
+}
+
+#AccountSettings.tabcontent input[type="submit"] {
+  width: 100%;
+  font-size: medium;
+  padding: 12px;
+  margin-top: 15px;
+  background-color: #5cb874;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#AccountSettings.tabcontent input[type="submit"]:hover {
+  background-color: #80c792;
+  font-size: medium;
+}
+
+
+
+
+/* Tab-specific styling for Pending Donations */
+#PendingDonations.tabcontent {
+  margin-bottom: 120px;
+  background-color: #f0f0f0;
+}
+
+#PendingDonations.tabcontent h5 {
+  text-align: center;
+  color: #5cb874;
+  margin-bottom: 20px;
+}
+
+#PendingDonations.tabcontent table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#PendingDonations.tabcontent th,
+#PendingDonations.tabcontent td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+#PendingDonations.tabcontent th {
+  background-color: #5cb874;
+  color: white;
+}
+
+#PendingDonations.tabcontent tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#PendingDonations.tabcontent tr:hover {
+  background-color: #ddd;
+}
+
+#PendingDonations.tabcontent td button {
+  padding: 6px 12px;
+  background-color: #5cb874;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#PendingDonations.tabcontent td button:hover {
+  background-color: #80c792;
+}
+
+
+
+
+
+/* Tab-specific styling for Completed Donations */
+#CompletedDonations.tabcontent {
+  margin-bottom: 120px;
+  background-color: #f0f0f0;
+}
+
+#CompletedDonations.tabcontent h5 {
+  text-align: center;
+  color: #5cb874;
+  margin-bottom: 20px;
+}
+
+#CompletedDonations.tabcontent table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#CompletedDonations.tabcontent th,
+#CompletedDonations.tabcontent td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+#CompletedDonations.tabcontent th {
+  background-color: #5cb874;
+  color: white;
+}
+
+#CompletedDonations.tabcontent tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#CompletedDonations.tabcontent tr:hover {
+  background-color: #ddd;
+}
+
+#CompletedDonations.tabcontent td button {
+  padding: 6px 12px;
+  background-color: #5cb874;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#CompletedDonations.tabcontent td button:hover {
+  background-color: #80c792;
+}
+
+
+
+
+  .mini-box {
+    background-color: #e9e5e5; /* Light gray background color */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow */
+    max-width: 400px; /* Limit the maximum width of the mini box */
+    margin: 20px auto; /* Center the mini box horizontally and add some top margin */
+    margin-top: 70px; /* Add some top margin */
+  }
+  
+  .wrapper {
+    flex: 1;
+  }
+  
+  footer {
+    text-align: center;
+    color: #777;
+    padding: 10px 0; /* Add some padding for better appearance */
+    background-color: #f1f1f1; /* Background color for the footer */
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+  }
+  
+  footer p {
+    margin: 5px 0;
+  }
+  
+  /* Form styling */
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  form input[type="text"],
+  form input[type="number"],
+  form input[type="tel"] {
+    /* Add green border to input fields */
+    border: 1px solid #5cb874;
+    /* Add green color to text inside input fields */
+    color: #5cb874;
+  }
+  
+  /* Table styling */
+  table {
+    width: 100%; /* Make table take up full width of container */
+    border-collapse: collapse; /* Collapse borders */
+  }
+  
+  table th, table td {
+    padding: 15px; /* Add padding to cells */
+    text-align: left; /* Align text to the left within cells */
+    border: 2px solid #ddd; /* Add border to cells */
+  }
+  
+  table th {
+    background-color: #f1f1f1; /* Light gray background for table header */
+    color: #444; /* Darker gray color for text in header */
+  }
+  
+  /* Tab-specific styling for Account Settings */
+#AccountSettings.tabcontent {
+  margin-bottom: 120px;
+  background-color: #f0f0f0;
+}
+
+#AccountSettings.tabcontent h2 {
+  text-align: center;
+  color: #5cb874;
+  cursor: pointer;
+}
+
+#AccountSettings.tabcontent label {
+  display: block;
+  color: #000;
+}
+
+#AccountSettings.tabcontent input[type="text"],
+#AccountSettings.tabcontent input[type="password"] {
+  width: calc(100% - 24px); /* Adjusted width */
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+  margin-bottom: 15px;
+  margin-left: 12px; /* Center input fields */
+}
+
+#AccountSettings.tabcontent input[type="text"]:focus,
+#AccountSettings.tabcontent input[type="password"]:focus {
+  outline: none;
+  border-color: #c9e6d1;
+}
+
+#AccountSettings.tabcontent input[type="submit"] {
+  width: calc(100% - 24px); /* Adjusted width */
+  font-size: medium;
+  padding: 12px;
+  margin-top: 15px;
+  background-color: #5cb874;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 12px; /* Center submit button */
+}
+
+#AccountSettings.tabcontent input[type="submit"]:hover {
+  background-color: #80c792;
+  font-size: medium;
+}

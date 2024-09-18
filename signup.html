@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="donorSignup.css"> <!-- Updated CSS file name -->
+</head>
+<body>
+    <main>
+        <section class="container">
+            <h2>Welcome Robin!</h2>
+            <h3>Register</h3>
+            <form action="signupData.php" method="POST" onsubmit="return validateForm()">
+                <div class="form-row">
+                    <div class="form-column">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="e.g. abc xyz" required><br><br>
+                        
+                        <label for="email">Email Id</label>
+                        <input type="text" id="email" name="email" placeholder="e.g. abc@gmail.com" required><br><br>
+                        
+                        <label for="uname">Username</label>
+                        <input type="text" id="uname" name="username" placeholder="e.g. roni-104" required><br><br>
+                        
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password"  required><br><br>
+                    </div>
+                    <div class="form-column">
+                        <label for="contactNumber">Contact Number</label>
+                        <input type="tel" id="contactNumber" name="contactNumber" required><br><br>
+                        
+                        <label for="aadhaarNumber">Aadhaar Number</label>
+                        <input type="tel" id="aadhaarNumber" name="aadhaarNo" required><br><br>
+
+                        <label for="residential_address">Residential Address</label>
+                        <input type="text" id="residential_address" name="residential_address" required><br><br>
+                        
+                        <label for="pincode">Pincode</label>
+                        <input type="tel" id="pincode" name="pincode" required><br><br>
+                    </div>
+                </div>
+                <input type="submit" class="button" value="Submit" name="submit">
+            </form>
+        </section>
+    </main>
+   
+    <script>
+        function validateForm() {
+            var email = document.getElementById('email').value;
+            var contactNumber = document.getElementById('contactNumber').value;
+            var aadhaarNumber = document.getElementById('aadhaarNumber').value;
+            var pincode = document.getElementById('pincode').value;
+
+            // Validate email
+            if (!email.includes('@')) {
+                alert('Please enter a valid email address.');
+                return false;
+            }
+
+            // Validate contact number
+            if (contactNumber.length !== 10 || isNaN(contactNumber)) {
+                alert('Contact number must be a 10-digit number.');
+                return false;
+            }
+
+            // Validate Aadhaar number
+            if (aadhaarNumber.length !== 12 || isNaN(aadhaarNumber)) {
+                alert('Aadhaar number must be a 12-digit number.');
+                return false;
+            }
+
+            // Validate pincode
+            if (pincode.length !== 6 || isNaN(pincode)) {
+                alert('Pincode must be a 6-digit number.');
+                return false;
+            }
+
+            return true; // Form submission allowed if all validations pass
+        }
+    </script>
+</body>
+</html>

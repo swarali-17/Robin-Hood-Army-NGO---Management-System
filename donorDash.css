@@ -1,0 +1,282 @@
+.content {
+  display: flex;
+}
+
+.left-column,
+.right-column {
+  flex: 1;
+  padding: 20px;
+}
+
+.left-column {
+  background-color: #f0f0f0; /* Example background color */
+}
+
+.right-column {
+  background-color: #ffffff; /* Example background color */
+}
+
+.image-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.image-container img {
+  max-width: 100%;
+}
+
+
+<style>
+    .donation-table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    .donation-table th,
+    .donation-table td {
+        border: 1px solid #dddddd;
+        padding: 10px;
+        text-align: left;
+    }
+
+    .donation-table th {
+        background-color: #f2f2f2;
+    }
+</style>
+
+
+
+
+
+
+
+/* donorDashboard.css */
+
+/* General styling */
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #f9f9f9;
+  color: #444;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #5cb874;
+}
+
+a:hover {
+  color: #80c792;
+  text-decoration: underline;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  max-width: 800px;
+  width: 100%;
+}
+
+h3, h4, h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #5cb874; /* Green color */
+  border-radius: 5px;
+  display: flex; /* Ensures tabs are in a single line */
+}
+
+.tab button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: background-color 0.3s ease;
+  width: 25%;
+  color: white; /* Change font color to white */
+  font-size: 18px; /* Increase font size */
+}
+
+.tab button:hover {
+  background-color: #80c792; /* Lighter shade of green on hover */
+}
+
+.tabcontent {
+  display: none;
+  padding: 20px;
+  border-top: none;
+}
+
+.tabcontent img {
+  display: block;
+  margin: 0 auto; /* Center the image horizontally */
+  max-width: 600px; /* Limit the maximum width of the image */
+}
+
+.mini-box {
+  background-color: #e9e5e5; /* Light gray background color */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow */
+  max-width: 400px; /* Limit the maximum width of the mini box */
+  margin: 20px auto; /* Center the mini box horizontally and add some top margin */
+  margin-top: 70px; /* Add some top margin */
+}
+
+/* Tab-specific styling */
+#Home.tabcontent {
+  background-color: #f0f0f0; /* Lighter background color for Home tab */
+}
+
+#Home.tabcontent h3 {
+  color: #5cb874; /* Green color for heading in Home tab */
+}
+
+
+/* Tab-specific styling */
+#MakeDonation.tabcontent {
+  background-color: #f0f0f0;
+  margin-bottom: 120px;
+}
+
+#MakeDonation.tabcontent h2 {
+  text-align: center;
+  color: #5cb874;
+  margin-bottom: 30px;
+}
+
+#MakeDonation.tabcontent label {
+  display: block;
+  margin-bottom: 9px;
+  color: #000;
+}
+
+#MakeDonation.tabcontent input[type="number"],
+#MakeDonation.tabcontent input[type="time"],
+#MakeDonation.tabcontent input[type="date"] {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+#MakeDonation.tabcontent input[type="number"]:focus,
+#MakeDonation.tabcontent input[type="time"]:focus,
+#MakeDonation.tabcontent input[type="date"]:focus {
+  outline: none;
+  border-color: #c9e6d1;
+}
+
+#MakeDonation.tabcontent input[type="submit"] {
+  width: 100%;
+  font-size:medium;
+  padding: 12px;
+  background-color: #5cb874;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+#MakeDonation.tabcontent input[type="submit"]:hover {
+  background-color: #80c792;
+  font-size:medium;
+}
+
+
+/* Table styling */
+table {
+  width: 100%; /* Make table take up full width of container */
+  border-collapse: collapse; /* Collapse borders */
+}
+
+table th, table td {
+  padding: 15px; /* Add padding to cells */
+  text-align: left; /* Align text to the left within cells */
+  border: 2px solid #555151; /* Add border to cells */
+}
+
+table th {
+  background-color: #f1f1f1; /* Light gray background for table header */
+  color: #444; /* Darker gray color for text in header */
+}
+
+/* donorDashboard.css */
+
+/* Tab-specific styling for Account Settings */
+#AccountSettings.tabcontent {
+  margin-bottom: 120px;
+ background-color: #f0f0f0;
+}
+
+#AccountSettings.tabcontent h2 {
+  text-align: center;
+  color: #5cb874;
+  cursor: pointer;
+}
+
+#AccountSettings.tabcontent label {
+  display: block;
+  color: #000;
+}
+
+#AccountSettings.tabcontent input[type="text"],
+#AccountSettings.tabcontent input[type="password"] {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+  
+}
+
+#AccountSettings.tabcontent input[type="text"]:focus,
+#AccountSettings.tabcontent input[type="password"]:focus {
+  outline: none;
+  border-color: #c9e6d1;
+}
+
+#AccountSettings.tabcontent input[type="submit"] {
+  width: 100%;
+  font-size: medium;
+  padding: 12px;
+  background-color: #5cb874;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+}
+
+#AccountSettings.tabcontent input[type="submit"]:hover {
+  background-color: #80c792;
+  font-size: medium;
+}
+
+
+footer {
+  text-align: center;
+  color: #777;
+  padding: 10px 0; /* Add some padding for better appearance */
+  background-color: #f1f1f1; /* Background color for the footer */
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+footer p {
+  margin: 5px 0;
+}
